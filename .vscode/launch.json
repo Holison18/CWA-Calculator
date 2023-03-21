@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/holyson/Desktop/All/Projects/Cpp/CWA calculator",
-      "program": "/home/holyson/Desktop/All/Projects/Cpp/CWA calculator/build/Debug/outDebug",
+      "cwd": "/home/holyson/Desktop/All/Projects/CWA calculator",
+      "program": "/home/holyson/Desktop/All/Projects/CWA calculator/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

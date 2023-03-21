@@ -24,18 +24,18 @@ class student():
     def calculate_cwa(self):
         total_grade = 0
         total_weight = 0
-        for i in self.courses:
-            total_grade += self.courses[i] * self.weight[i]
+        for i in range(len(self.grades)):
+            total_grade += self.grades[i] * self.weight[i]
             total_weight += self.weight[i]
             i+=1
-        cwa = total_grade/total_weight
-        if cwa >= 70:
+        self.cwa = total_grade/total_weight
+        if self.cwa >= 70:
             self.student_class = "First Class"
-        elif cwa >=60 and cwa <70:
+        elif self.cwa >=60 and self.cwa <70:
             self.student_class = "Second Class Upper"
-        elif cwa >=50 and cwa <60:
+        elif self.cwa >=50 and self.cwa <60:
             self.student_class = "Second Class low"
-        elif cwa >=40 and cwa <60:
+        elif self.cwa >=40 and self.cwa <60:
             self.student_class = "Pass"
         else:
             self.student_class = "Fail"
@@ -48,8 +48,9 @@ class student():
         print(f"Student ID:{self.student_id}")
         print(f"Major:{self.major}")
         # iterate over the course and print them with their weights and grades
-        for i in self.courses:
-            print(f"Course:{i} Weight:{self.weight[i]} Grade:{self.grades[i]}")
+        print("courses\t\tweight\t\tgrades")
+        for i in range(len(self.courses)):
+            print(f"{self.courses[i]}\t\t{self.weight[i]}\t\t{self.grades[i]}")
             i+=1
         # print the cwa and class
         print(f"CWA:{self.cwa}")
@@ -58,9 +59,6 @@ class student():
 
 def main():
     # declare variables
-    name = ""
-    student_id = ""
-    major = ""
     courses = []
     weight = []
     grades = []
@@ -94,6 +92,5 @@ def main():
     # print the student's details
     student1.print_info()
 
-if __name__ == "__main__":
-    main()
+main()
 
